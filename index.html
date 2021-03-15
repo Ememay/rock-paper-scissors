@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="game-header">
+        <span class="score-area"> player score :
+            <span id="player-score" class="score-animation" >0</span>
+        </span>
+        <h1>rock paper scissors</h1>
+        <span class="score-area">computer score :
+            <span id="computer-score" class="score-animation">0</span>
+        </span>
+    </section>
+    <section class="game-arae"> 
+        <button class="start-game-btn">Start game</button>
+        <div class="main-game-area">
+            <h1 class="game-status">Game started</h1>
+            <div class="hands-arae">
+                <img src="imgs/rock.png" id="player-hand">
+                <img src="imgs/rock.png" id="computer-hand">
+            </div>
+            <div class="game-choose-option">
+                <button>Rock</button>
+                <button>Paper</button>
+                <button>Scissors</button>
+            </div>
+        </div>
+    </section>
+    <section class="game-footer">
+        <button class="restart-game-btn game-option">Restart game</button>
+        <button class="Introducing-game-btn game-option">Introducing the game</button>   
+    </section>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
