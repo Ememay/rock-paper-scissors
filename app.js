@@ -11,6 +11,7 @@
     7 : check if playerchooise is rock
     8 : check if playerchooise is Scissors
     9 : update the scores
+    10 : change hand picture
 
 */   
 
@@ -52,7 +53,8 @@ gameoptionbtn.forEach(optionbtn=>{
         let computerchoose = computeroptions[computerrandomindex];
         // 4 
         let playerchoose = e.target.textContent;
-        console.log(playerchoose,computerchoose);
+        // 10-1
+        changehandpicture(playerchoose , computerchoose);
         // 5
         if(playerchoose === computerchoose){
             gamestatus.innerHTML = 'its tie,try again';
@@ -108,6 +110,14 @@ gameoptionbtn.forEach(optionbtn=>{
             computerscorearea.textContent = computerscore;
         }
 
+        // 10-2
+        function changehandpicture (playerchoose , computerchoose){
+            console.log(playerchoose,computerchoose);
+            const playerhand = document.getElementById('player-hand');
+            playerhand.src = `imgs/${playerchoose}.png`;
+            const computerhand = document.getElementById('computer-hand');
+            computerhand.src = `imgs/${computerchoose}.png`;
+        }
     })
 })
 
