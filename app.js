@@ -39,8 +39,7 @@ startgamebtn.addEventListener('click',()=>{
 /// neseccery check winner element & variable
 let playerscore = 0;
 let computerscore = 0;
-const playerscorearea = document.getElementById('player-score');
-const computerscorearea = document.getElementById('computer-score');
+
 
 // 2
 const gameoptionbtn = document.querySelectorAll('.game-choose-option button');
@@ -64,10 +63,12 @@ gameoptionbtn.forEach(optionbtn=>{
             if(computerchoose === 'Rock'){
                 playerscore++;
             gamestatus.innerHTML = 'Player Win';
+            updatescore()
                 return
             }else{
                 computerscore++;
                 gamestatus.innerHTML = 'Computer Win';
+                updatescore()
                     return
             }
         }
@@ -76,10 +77,12 @@ gameoptionbtn.forEach(optionbtn=>{
             if(computerchoose === 'Scissors'){
                 playerscore++;
             gamestatus.innerHTML = 'Player Win';
+            updatescore()
                 return
             }else{
                 computerscore++;
                 gamestatus.innerHTML = 'Computer Win';
+                updatescore()
                     return
             }
         }
@@ -88,15 +91,19 @@ gameoptionbtn.forEach(optionbtn=>{
             if(computerchoose === 'Paper'){
                 playerscore++;
             gamestatus.innerHTML = 'Player Win';
+            updatescore()
                 return
             }else{
                 computerscore++;
                 gamestatus.innerHTML = 'Computer Win';
+                updatescore()
                     return
             }
         }
         // 9
         function updatescore (){
+            const playerscorearea = document.getElementById('player-score');
+            const computerscorearea = document.getElementById('computer-score');
             playerscorearea.textContent = playerscore;
             computerscorearea.textContent = computerscore;
         }
