@@ -112,7 +112,6 @@ gameoptionbtn.forEach(optionbtn=>{
 
         // 10-2
         function changehandpicture (playerchoose , computerchoose){
-            console.log(playerchoose,computerchoose);
             const playerhand = document.getElementById('player-hand');
             playerhand.src = `imgs/${playerchoose}.png`;
             const computerhand = document.getElementById('computer-hand');
